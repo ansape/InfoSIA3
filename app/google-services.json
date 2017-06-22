@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1008657180337",
+    "firebase_url": "https://infosia-f05b3.firebaseio.com",
+    "project_id": "infosia-f05b3",
+    "storage_bucket": "infosia-f05b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008657180337:android:21525f6ecb6ca21b",
+        "android_client_info": {
+          "package_name": "cr.ac.una.infosia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008657180337-6p32ft3d5ult4cdv4b0vf4c0p8eeotfc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cr.ac.una.infosia",
+            "certificate_hash": "3749ef2baa23d1c5edf38532b939dac52418a76d"
+          }
+        },
+        {
+          "client_id": "1008657180337-hij4cb2qrt4hlm897p7omfqvu1asnr95.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApnnMx6D3P_QREdcmXNMXN6CvnRobOpGA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008657180337-hij4cb2qrt4hlm897p7omfqvu1asnr95.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

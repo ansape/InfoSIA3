@@ -74,23 +74,23 @@ public class ListViewAdapter extends BaseAdapter {
         //imageView.setImageBitmap(getBitmapFromURL(lstNoticia.get(i).getUrl())); //ultima prueba
         /*mostrar imagen*/
         //Bitmap bitmap = getImageFromURL(lstNoticia.get(i).getUrl());
-        System.out.println(lstNoticia.get(i).getUrl());
+        //System.out.println(lstNoticia.get(i).getUrl());
         //imageView.setImageBitmap(bitmap);
         //uri = Uri.parse(lstNoticia.get(i).getUrl());
         //imageView.setImageURI(uri);
 
-        Bitmap obtener_imagen = get_imagen(lstNoticia.get(i).getUrl());
-        imageView.setImageBitmap(obtener_imagen);
+        /*Bitmap obtener_imagen = get_imagen(lstNoticia.get(i).getUrl());
+        imageView.setImageBitmap(obtener_imagen);*/
 
 
 
         /*libreria de quincho*/
 
-        /*Glide.with((MainActivity) context)
+        Glide.with(this.activity)
                 .load(lstNoticia.get(i).getUrl())
                 .fitCenter()
                 .centerCrop()
-                .into(imageView);*/
+                .into(imageView);
 
         return itemView;
 

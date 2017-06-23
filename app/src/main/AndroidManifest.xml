@@ -24,7 +24,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InicioActivity">
+        <activity android:name=".EstudianteActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,9 +40,9 @@
             android:name=".LoginActivity"
             android:screenOrientation="portrait"></activity>
 
-        <activity
+      <!--   <activity
             android:name=".EstudianteActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"></activity> -->
     </application>
 
 </manifest>

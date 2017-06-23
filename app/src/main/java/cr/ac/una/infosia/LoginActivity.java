@@ -183,7 +183,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-       Intent InicioActivity1 = new Intent(getApplicationContext(), InicioActivity.class);
+       Intent InicioActivity1 = new Intent(getApplicationContext(), EstudianteActivity.class);
         startActivity(InicioActivity1);
 
     }

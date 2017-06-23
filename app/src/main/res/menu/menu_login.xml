@@ -7,5 +7,5 @@
     <item android:id="@+id/menu_logatras"
         android:title="salir"
         android:icon="@drawable/ic_atraslog"
-        app:showAsAction="always"/>
+         app:showAsAction="always"/>
 </menu>

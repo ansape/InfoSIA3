@@ -10,17 +10,17 @@
        android:title="Noticias"
         android:id= "@+id/toolbar2"
         android:minHeight="?attr/actionBarSize"
-        android:layout_width="391dp"
+        android:layout_width="373dp"
         android:layout_height="56dp"
         android:background="?attr/colorPrimary"
         app:titleTextColor="@android:color/white"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="0dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginRight="7dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.478" />
+        app:layout_constraintLeft_toLeftOf="parent" />
+
 
 
     <ListView

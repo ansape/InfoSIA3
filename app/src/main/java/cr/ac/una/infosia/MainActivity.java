@@ -134,8 +134,8 @@ private List<Noticia> list_noticias = new ArrayList<>();
 
 
 // parte del progres
-            mProgressDialog.setTitle("subiendo.........");
-            mProgressDialog.setMessage("subiendo foto ");
+            mProgressDialog.setTitle("Subiendo Imagen");
+            mProgressDialog.setMessage("Subiendo Imagen...");
             mProgressDialog.setCancelable(false);
             mProgressDialog.show();
 
@@ -263,7 +263,10 @@ private List<Noticia> list_noticias = new ArrayList<>();
 
     private void updateUser(Noticia noticia) {
         mDatabaseReference.child("Noticia").child(noticia.getUid()).child("descripcion").setValue(noticia.getDescripcion());
-        //mDatabaseReference.child("Noticia").child(noticia.getUid()).child("urlImagen").setValue("Aqui deberia ir la url");
+        if(descargarFoto.toString() != null){
+            mDatabaseReference.child("Noticia").child(noticia.getUid()).child("url").setValue(descargarFoto.toString());
+        }
+
        // mDatabaseReference.child("Noticia").child(user.getUid()).child("email").setValue(user.getEmail());
         clearEditText();
     }

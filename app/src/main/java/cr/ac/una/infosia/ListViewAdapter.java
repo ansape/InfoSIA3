@@ -125,7 +125,7 @@ public class ListViewAdapter extends BaseAdapter {
             return myBitmap;
         } catch (Exception e){
             e.printStackTrace();
-            System.out.println("No esta haciendo ni picha");
+            System.out.println("No esta haciendo");
             return null;
         }
     }

@@ -167,8 +167,8 @@ public class LoginActivity extends AppCompatActivity {
 
          if (item.getItemId()== R.id.menu_logatras){
             signOut();
-            Intent InicioActivity = new Intent(getApplicationContext(), InicioActivity.class);
-            startActivity(InicioActivity);
+            Intent EstActivity = new Intent(getApplicationContext(), EstudianteActivity.class);
+            startActivity(EstActivity);
 
         }
         return true;

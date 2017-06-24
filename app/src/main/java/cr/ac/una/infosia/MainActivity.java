@@ -57,6 +57,7 @@ private List<Noticia> list_noticias = new ArrayList<>();
     private StorageReference mStorage;
     private  static  final int GALLERY_INTENT=1;
     private ProgressDialog mProgressDialog;
+    private int bandera = 0;
 
 
     @Override
@@ -76,12 +77,14 @@ private List<Noticia> list_noticias = new ArrayList<>();
         setSupportActionBar(toolbar);
 
         imageButton = (ImageButton)findViewById(R.id.imageButton);
+        imageButton.setBackgroundResource(android.R.drawable.ic_menu_gallery); //nuevo
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_PICK);
                 intent.setType("image/*");
                 startActivityForResult(intent, GALLERY_INTENT);
+                bandera = 1; //nuevo
             }
         });
 
@@ -217,7 +220,7 @@ private List<Noticia> list_noticias = new ArrayList<>();
         {
 
 
-            if(TextUtils.isEmpty(descripcionN))
+            if(TextUtils.isEmpty(descripcionN) || bandera == 0)
             {  Toast.makeText(MainActivity.this, "Favor completar los espacios.", Toast.LENGTH_LONG).show();
 
 
@@ -262,11 +265,12 @@ private List<Noticia> list_noticias = new ArrayList<>();
     }
 
     private void updateUser(Noticia noticia) {
-        mDatabaseReference.child("Noticia").child(noticia.getUid()).child("descripcion").setValue(noticia.getDescripcion());
-        if(descargarFoto.toString() != null){
+        if(bandera == 1){
+            mDatabaseReference.child("Noticia").child(noticia.getUid()).child("descripcion").setValue(noticia.getDescripcion());
             mDatabaseReference.child("Noticia").child(noticia.getUid()).child("url").setValue(descargarFoto.toString());
+        }else{
+            mDatabaseReference.child("Noticia").child(noticia.getUid()).child("descripcion").setValue(noticia.getDescripcion());
         }
-
        // mDatabaseReference.child("Noticia").child(user.getUid()).child("email").setValue(user.getEmail());
         clearEditText();
     }
@@ -281,6 +285,10 @@ private List<Noticia> list_noticias = new ArrayList<>();
     private void clearEditText() {
         input_decripcion.setText("");
        // input_email.setText("");
+        //limpiar imagen@android:drawable/ic_menu_gallery
+        imageButton.setImageBitmap(null);
+        imageButton.setBackgroundResource(android.R.drawable.ic_menu_gallery);
+        bandera = 0;
 
     }
 
